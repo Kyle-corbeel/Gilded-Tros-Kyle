@@ -18,7 +18,7 @@ public class TexttestFixture {
                 new Item("case for Backstage passes for",7,20),
                 // these smelly items do not work properly yet
                 new Item("Duplicate Code", 3, 5),
-                new Item("Long Methods", 3, 6),
+                new Item("Long Methods", 3, 60),
                 new Item("Ugly Variable Names", 3, 6) };
 
         GildedTros app = new GildedTros(items);
