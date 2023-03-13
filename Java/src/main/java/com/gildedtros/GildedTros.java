@@ -22,6 +22,7 @@ class GildedTros {
                 }
                 else if(isDodgy(items[i])){
                     items[i].quality-=2;
+                    if(items[i].sellIn<0){items[i].quality-=2;}
                 }
                 else if(isBackstagePass(items[i])){
                     if(items[i].sellIn<0){
@@ -35,10 +36,12 @@ class GildedTros {
                     }
                     else{
                         items[i].quality--;
+                        if(items[i].sellIn<0){items[i].quality--;}
                     }
                 }
                 else{
                     items[i].quality--;
+                    if(items[i].sellIn<0){items[i].quality--;}
                 }
                 //Check non-legendary item quality is between 0 and 50
                 items[i].quality = max(min(items[i].quality,50),0);
