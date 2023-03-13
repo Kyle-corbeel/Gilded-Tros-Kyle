@@ -1,5 +1,6 @@
 package com.gildedtros;
 
+import static java.lang.Math.max;
 import static java.lang.Math.min;
 
 class GildedTros {
@@ -11,9 +12,11 @@ class GildedTros {
 
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
+            //legendary items remain unchanged
             if(!isLegendary(items[i])){
                 items[i].sellIn--;
 
+                //Check for different item types
                 if(items[i].name.equals("Good Wine")){
                     items[i].quality++;
                 }
@@ -37,7 +40,10 @@ class GildedTros {
                 else{
                     items[i].quality--;
                 }
+                //Check non-legendary item quality not going over 50
                 items[i].quality = min(items[i].quality,50);
+                //Quality is never negative
+                items[i].quality = max(items[i].quality,0);
             }
             // if (!items[i].name.equals("Good Wine")
             //         && !items[i].name.equals("Backstage passes for Re:Factor")

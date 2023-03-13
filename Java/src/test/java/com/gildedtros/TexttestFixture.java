@@ -10,9 +10,9 @@ public class TexttestFixture {
                 new Item("Elixir of the SOLID", 5, 7),
                 new Item("B-DAWG Keychain", 0, 80),
                 new Item("B-DAWG Keychain", -1, 80),
-                new Item("Backstage passes for Re:Factor", 15, 20),
-                new Item("Backstage passes for Re:Factor", 10, 49),
-                new Item("Backstage passes for HAXX", 5, 49),
+                new Item("Backstage passes for Re:Factor", 12, 20),
+                new Item("Backstage passes for Re:Factor", 7, 49),
+                new Item("Backstage passes for HAXX", 3, 45),
                 // these smelly items do not work properly yet
                 new Item("Duplicate Code", 3, 6),
                 new Item("Long Methods", 3, 6),
@@ -20,7 +20,7 @@ public class TexttestFixture {
 
         GildedTros app = new GildedTros(items);
 
-        int days = 2;
+        int days = 5;
         if (args.length > 0) {
             days = Integer.parseInt(args[0]) + 1;
         }
