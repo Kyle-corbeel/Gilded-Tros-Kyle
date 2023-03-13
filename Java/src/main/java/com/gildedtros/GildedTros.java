@@ -20,7 +20,7 @@ class GildedTros {
                 if(items[i].name.equals("Good Wine")){
                     items[i].quality++;
                 }
-                else if(isDodgy(items[i])){
+                else if(isSmelly(items[i])){
                     items[i].quality-=2;
                     if(items[i].sellIn<0){items[i].quality-=2;}
                 }
@@ -52,7 +52,7 @@ class GildedTros {
     public boolean isLegendary(Item item){
         return item.name.equals("B-DAWG Keychain");
     }
-    public boolean isDodgy(Item item){
+    public boolean isSmelly(Item item){
         return item.name.equals("Duplicate Code") ||
             item.name.equals("Long Methods") ||
             item.name.equals("Ugly Variable Names");
