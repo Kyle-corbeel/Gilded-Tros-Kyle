@@ -107,6 +107,6 @@ class GildedTros {
             item.name.equals("Ugly Variable Names");
     }
     public boolean isBackstagePass(Item item){
-        return item.name.contains("Backstage passes for");
+        return item.name.startsWith("Backstage passes for");
     }
 }
